@@ -1,8 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main></main>
+<Layout title="ReynaldoDev">
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <img
+        src="../../public/foto_reynaldo.jpg"
+        alt=" Foto Reynaldo"
+        class="rounded-full w-12 h-12 mb-4"
+      />
+      <h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-6">
+        Hey, I'm Reynaldo Moreno
+
+        <a
+          class="flex justify-center items-center"
+          href="https://www.linkedin.com/in/reynaldo-moreno-2abab11b6/"
+          target="_blank"
+          rel="noopenner"><Badge>disponible for work</Badge></a
+        >
+        <h2 class="text-xl
+            opacity-80">
+          +3 Years of experience. Web Developer & Content Creator. From
+          Venezuela. Specialized in creating unique applications
+        </h2>
+      </h1>
+    </section>
+  </main>
 </Layout>
