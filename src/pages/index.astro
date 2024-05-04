@@ -1,15 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Linkedin from "../Icons/Linkedin.astro";
+import GitHub from "../Icons/GitHub.astro";
+import Mail from "../Icons/Mail.astro";
 ---
 
-<Layout title="ReynaldoDev">
+<Layout
+  title="ReynaldoDev - Desarrollador y Programador Web con 3 años de experiencia"
+  description="Contrata a Reynaldo Moreno el Mejor Desarrollador y Porgramador Web con 3 años de experiencia, en el Desarrollo de Aplicaciones Unicas e Increibles."
+>
   <main>
     <section class="w-full mx-auto lg:w-[740px] py-44">
       <img
         src="../../public/foto_reynaldo.jpg"
         alt=" Foto Reynaldo"
-        class="rounded-full w-12 h-12 mb-4"
+        class="rounded-full size-12 mb-4"
       />
       <h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-6">
         Hey, I'm Reynaldo Moreno
@@ -20,12 +27,30 @@ import Badge from "../components/Badge.astro";
           target="_blank"
           rel="noopenner"><Badge>disponible for work</Badge></a
         >
-        <h2 class="text-xl
-            opacity-80">
-          +3 Years of experience. Web Developer & Content Creator. From
-          Venezuela. Specialized in creating unique applications
-        </h2>
       </h1>
+      <h2 class="text-xl
+					opacity-80 text-wrap">
+        +3 Years of experience. <span class="text-yellow-200/90"
+          >Web Developer & Content Creator</span
+        >. From Venezuela. Specialized in creating unique applications
+      </h2>
+
+      <nav class="flex gap-x-2 mt-3">
+        <SocialPill
+          href="https://www.linkedin.com/in/reynaldo-moreno-2abab11b6/"
+        >
+          <Linkedin class="w-6 h-6" />
+          Linkedin
+        </SocialPill>
+        <SocialPill href="https://github.com/Rmoreno3">
+          <GitHub class="w-6 h-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="https://github.com/Rmoreno3">
+          <Mail class="w-6 h-6" />
+          reynaldomoreno173@gmail.com
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
