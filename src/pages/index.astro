@@ -8,6 +8,8 @@ import Experience from "../components/Experience.astro";
 import ExperienceIcon from "../Icons/ExperienceIcon.astro";
 import CodeIcon from "../Icons/CodeIcon.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import ProfileCheck from "../Icons/ProfileCheck.astro";
 ---
 
 <Layout
@@ -33,6 +35,14 @@ import Projects from "../components/Projects.astro";
         Projects
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about-me" class="py-10 mb-8">
+      <h2 class="text-2xl font-semibold mb-5 flex gap-x-3 items-center">
+        <ProfileCheck class="size-7" />
+        About Me
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
