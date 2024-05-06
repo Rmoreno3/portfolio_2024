@@ -1,0 +1,71 @@
+---
+import AstroIcon from "../Icons/AstroIcon.astro";
+import TailwindIcon from "../Icons/TailwindIcon.astro";
+import ReactIcon from "../Icons/ReactIcon.astro";
+
+const TAGS = {
+  ASTRO: {
+    name: "Astro",
+    icon: AstroIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    icon: TailwindIcon,
+  },
+  REACT: {
+    name: "React",
+    icon: ReactIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "E-commerce",
+    description: "E-commerce whit React, Tailwind. All functionalities.",
+    link: "https://ecommerce-drab-rho.vercel.app/",
+    github: "#",
+    image: "../../public/ecommerce.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Tesla Clone",
+    description: "Tesla Clone whit Astro, Tailwind.",
+    link: "https://tesla-landing-xi.vercel.app/",
+    github: "#",
+    image: "../../public/tesla.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
+  {
+    title: "Todo App",
+    description: "Todo App with ReactJs. Create and delete tasks.",
+    link: "https://rmoreno3.github.io/Todo_machine/",
+    github: "#",
+    image: "../../public/todoApp.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, link, github, tags, image }) => (
+    <article class="py-4">
+      <h3 class="text-2xl font-semibold text-yellow-200/90 mb-4">{title}</h3>
+      <p class="text-lg mb-2 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 mb-4">
+        {tags.map((tag) => (
+          <li>
+            <span class="flex items-center gap-x-2 rounded-full bg-white/5 px-2 py-1 shadow-2xl shadow-white/20">
+              <tag.icon class="size-5" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded-lg shadow-2xl shadow-white/20"
+        src={image}
+        alt={`Captura de pantalla projecto de ${title}`}
+      />
+    </article>
+  ))
+}
